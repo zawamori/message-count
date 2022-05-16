@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <title>未読メッセージ数確認</title>
+  <script type="text/javascript">
+    function api(){
+      window.open("https://api.scratch.mit.edu/users/"+document.user.name.value+"/messages/count");
+    }
+  </script>
+</head>
+<body>
+  <form name="user">
+  <small><small>ユーザー名を入力する</small></small><br>
+  <input type="text" name="name"><br>
+  <input type="button" value="実行" onclick="api()"><br>
+  <span>※エンターキーで実行はされません</span>
+  </form>
+</body>
+</html>
